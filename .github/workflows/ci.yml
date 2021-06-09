@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+    paths:
+      - "**.c"
+      - "**.h"
+      - "**/CMakeLists.txt"
+      - .github/workflows/ci.yml
+
+jobs:
+
+  linux:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - run: cmake -B build
+    - run: cmake --build build
+    - run: ctest --test-dir build -V
