@@ -12,7 +12,7 @@ It's expected that CTest error popups on Windows
 ctest --interactive-debug-mode 1
 ```
 
-However this is not the case, at least with CMake 3.20.3 (and probably many other versions) on Windows 10.
+However this is not the case, at least with CMake 3.13.5 and 3.20.3 (and probably many other versions) on Windows 10.
 I tried this with GCC 10.3 from MSYS2 and VS 2019 16.10.
 
 ## Reproduce issue
