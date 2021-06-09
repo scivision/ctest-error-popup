@@ -22,7 +22,8 @@ On Windows:
 ```sh
 cmake -Bbuild
 cmake --build build
-ctest --test-dir build
+
+ctest --interactive-debug-mode 1 --test-dir build
 ```
 
 the last command intentionally has a DLL that's in the build/lib/addone.dll and is not on PATH, and so error 0cx0000135 is issued.
